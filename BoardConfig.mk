@@ -10,6 +10,10 @@ DEVICE_PATH := device/samsung/r11q
 # For building with minimal manifest
 ALLOW_MISSING_DEPENDENCIES := true
 
+# Treble
+PRODUCT_ENFORCE_VINTF_MANIFEST := true
+PRODUCT_FULL_TREBLE := true
+
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
@@ -165,10 +169,6 @@ TWRP_EVENT_LOGGING := true
 # Properties
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
-
-# Treble
-PRODUCT_ENFORCE_VINTF_MANIFEST := true
-PRODUCT_FULL_TREBLE := true
 
 # SHRP
 SHRP_DEVICE_CODE := r11q
